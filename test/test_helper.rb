@@ -5,18 +5,16 @@ require 'rails/test_help'
 require 'capybara/rails'
 #Capybara.default_driver = :selenium
 
-# DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.strategy = :truncation
 
 class ActiveSupport::TestCase
-    # def setup
-    #     DatabaseCleaner.start
-    # end
+    def setup
+        DatabaseCleaner.start
+    end
 
-    # def teardown
-    #     DatabaseCleaner.clean
-    #     Capybara.reset_sessions!
-    #     Capybara.use_default_driver
-    # end
+    def teardown
+        DatabaseCleaner.clean
+    end
   # Add more helper methods to be used by all tests here...
 end
 
